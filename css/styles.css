@@ -603,7 +603,7 @@ img {
     border: 1px solid #ffffff;
     background-color: transparent;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 2;
     letter-spacing: 0.04em;
     padding-left: 16px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -689,7 +689,7 @@ img {
 .orde-close:focus {
     background-color: #404bbf;
     border: none;
-    fill: #ffffff
+    fill: #ffffff;
 }
 
 .icon-close {
@@ -756,8 +756,8 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-div-form-name:focus-within > .modal-div-form-input-icon {
-    fill: var(--IRIS);
+.modal-div-form-input:focus > .modal-div-form-input-icon {
+    fill: #4D5AE5;
 }
 
 .modal-div-comment {
@@ -784,40 +784,41 @@ img {
     border-color: #4D5AE5;
 }
 
-.modal-div-form-form-agreement {
-    margin-bottom: 24px;
-}
-
-.form-agreement {
-    display: block;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
-}
-
-.privacy-policy {
+.review-form-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    fill: transparent;
+    transition: background-color 300ms ease, box-shadow 300ms ease;
 }
 
-.form-input:checked.privacy-policy {
-    background-color: #404bbf;
-    border: none;
-    fill: #F4F4FD;
+input[type='checkbox']:checked~.review-form-checkbox {
+    background: #404bbf;
+    border-color: transparent;
 }
 
-.form-agreement-href {
+input[type='checkbox']:focus-visible~.review-form-checkbox {
+    box-shadow: 0 0 0 4px rgba(64, 75, 191, 0.25);
+}
+
+.review-form-link {
     color: #4d5ae5;
+}
+
+.review-form-checkbox-icon {
+    fill: #f4f4fd;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: opacity 300ms ease 150ms,
+        transform 300ms cubic-bezier(0.61, -0.01, 0.52, 1.46) 150ms;
+}
+
+input[type='checkbox']:checked~.review-form-checkbox>.review-form-checkbox-icon {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .modal-div-button {

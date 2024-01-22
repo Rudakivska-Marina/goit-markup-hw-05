@@ -141,8 +141,6 @@ img {
     background: var(--OCEAN, #404BBF);
 }
 
-
-
 /* address */
 .contacts {
     font-style: normal;
@@ -817,7 +815,7 @@ img {
     fill: transparent;
 }
 
-input[type='checkbox']:checked~.review-form-checkbox
+.checkbox-input:checked + .review-form-agreement  .review-form-checkbox
 {
     background-color: #404bbf;
     border: none;

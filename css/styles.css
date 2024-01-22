@@ -685,10 +685,14 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.orde-close:hover .icon-close,
-.orde-close:focus .icon-close{
+.orde-close:hover,
+.orde-close:focus{
     background-color: #404bbf;
     border: none;
+}
+
+.orde-close:hover .icon-close,
+.orde-close:focus .icon-close {
     fill: #ffffff;
 }
 
@@ -741,9 +745,12 @@ img {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-div-form-input:focus {
+.modal-div-form-input:focus  {
     border-color: #4D5AE5;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-div-form-input:focus ~ .modal-div-form-input-icon {
+    fill: #4D5AE5;
 }
 
 .modal-div-form-input-icon {
@@ -780,7 +787,7 @@ img {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-comment:focus {
+.form-comment:focus::placeholder {
     border-color: #4D5AE5;
 }
 
@@ -788,7 +795,7 @@ img {
     margin-bottom: 24px;
 }
 
-.form_agreement {
+.review-form-agreement {
     display: block;
     font-size: 12px;
     line-height: 1.17;
@@ -804,11 +811,12 @@ img {
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    transition: background-color 300ms ease, box-shadow 300ms ease;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: transparent;
 }
 
-.checkbox-input:checked~.review-form-checkbox {
+input[type='checkbox']:checked~.review-form-checkbox
+{
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
@@ -820,6 +828,10 @@ img {
     transform: scale(0.3);
     transition: opacity 300ms ease 150ms,
         transform 300ms cubic-bezier(0.61, -0.01, 0.52, 1.46) 150ms;
+}
+
+.review-form-link {
+    color: #4d5ae5;
 }
 
 .modal-div-button {

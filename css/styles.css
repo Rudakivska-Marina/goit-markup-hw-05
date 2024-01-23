@@ -830,6 +830,11 @@ img {
         transform 300ms cubic-bezier(0.61, -0.01, 0.52, 1.46) 150ms;
 }
 
+.checkbox-input:checked+.review-form-agreement .review-form-checkbox .review-form-checkbox-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
 .review-form-link {
     color: #4d5ae5;
 }

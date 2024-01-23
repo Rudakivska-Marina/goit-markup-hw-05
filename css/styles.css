@@ -433,6 +433,7 @@ img {
 
 .our-portfolio-list-li {
     flex-shrink: 0;
+    cursor: pointer;
     background: var(--WHITE, #FFFFFF);
     width: calc((100% - 48px) / 3);
     border-top: none;
